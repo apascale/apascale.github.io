@@ -10,7 +10,11 @@ function btntest_onclick()
 }
 function DaddysLunch(daddy)
 {
-alert("Irrigation System Has Been Changed" + serverResponse + "YES");
+	var source = new EventSource("demo_sse.php");
+    source.onmessage = function(event) {
+         alert("Irrigation System Has Been Changed" + document.getElementById("result").innerHTML += event.data);
+    };
+
 daddy.close()
 }
 </script>
