@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script language="javascript" type="text/javascript">
 function btntest_onclick() 
 {
@@ -11,9 +10,7 @@ function btntest_onclick()
 }
 function DaddysLunch(daddy)
 {
-	$.get("demo_test.asp", function(data, status){
-		alert("Data: " + data + "\nStatus: " + status);
-    });
+	alert("Request Sent");
 	daddy.close()
 }
 </script>
