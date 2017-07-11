@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script language="javascript" type="text/javascript">
 function btntest_onclick() 
 {
-    var daddy = window.open('http://192.168.1.12/inline');
+    var daddy = window.open('http://192.168.1.12/0');
 	daddy.opener = window.self;
 	
 	setTimeout(DaddysLunch(daddy), 200);
 }
 function DaddysLunch(daddy)
 {
-alert("CHanged");
+	$.get("demo_test.asp", function(data, status){
+		alert("Data: " + data + "\nStatus: " + status);
+    });
 
-daddy.close()
+	daddy.close()
 }
 </script>
 <style>
